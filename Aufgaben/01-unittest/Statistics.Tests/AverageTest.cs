@@ -36,5 +36,20 @@ namespace Statistics.Tests
 
             Assert.Throws<ArgumentException>(() => average.Mean(numbers));
         }
+        [Fact]
+        public void TestMedianForOddNumberOfElements()
+        {
+
+        }
+        [Fact]
+        public void TestMedianForEvenNumberOfElements()
+        {
+
+        }
+        [Fact]
+        public void TestMedianForNoElements()
+        {
+
+        }
     }
 }
