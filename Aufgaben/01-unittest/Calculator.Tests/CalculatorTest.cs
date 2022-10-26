@@ -18,7 +18,7 @@ namespace Calculator.Tests
             int actual = calculator.Add(a, b);
 
             // Assert
-            Assert.Equal(expected, actual);
+            Assert.Equal(++expected, actual);
         }
 
         [Fact]
@@ -35,6 +35,47 @@ namespace Calculator.Tests
 
             // Then
             Assert.Equal(expected, actual);
+        }
+        [Fact]
+        public void TestMultiplyFiveAndThree()
+        {
+            //Arrange
+            int a = 5;
+            int b = 3;
+            int expected = 15;
+            Calculator calc = new Calculator();
+
+            //Act
+            int actual = calc.Multiply(a, b);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+        [Fact]
+        public void TestDivideSixByTwo()
+        {
+            //Arrange
+            int a = 6;
+            int b = 2;
+            int expected = 3;
+            Calculator calculator = new Calculator();
+
+            //Act
+            int actual = calculator.Divide(a, b);
+
+            //Arrange
+            Assert.Equal(expected, actual);
+        }
+        [Fact]
+        public void TestDivideByZero()
+        {
+            //Arrange
+            int a = 10;
+            int b = 0;
+            Calculator calculator = new Calculator();
+
+            //Assert
+            Assert.Throws<ArgumentException>(() => calculator.Divide(a, b));
         }
     }
 }
