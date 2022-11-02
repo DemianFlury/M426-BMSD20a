@@ -20,6 +20,7 @@ namespace Statistics
 
         public double Median(List<int> numbers)
         {
+            numbers.Sort();
             int index;
             if (numbers.Count == 0)
                 throw new ArgumentException();
