@@ -39,10 +39,7 @@ namespace Statistics.Tests
         [Fact]
         public void TestMedianForOddNumberOfElements()
         {
-            List<int> numbers = new List<int>();
-            numbers.Add(1);
-            numbers.Add(2);
-            numbers.Add(3);
+            List<int> numbers = new List<int>() { 1, 2, 3 };
             Average average = new Average();
             int expected = 2;
             double actual;
@@ -54,9 +51,7 @@ namespace Statistics.Tests
         [Fact]
         public void TestMedianForEvenNumberOfElements()
         {
-            List<int> numbers = new List<int>();
-            numbers.Add(1);
-            numbers.Add(2);
+            List<int> numbers = new List<int>() { 1, 2 };
             Average average = new Average();
             double expected = 1.5, actual;
 
