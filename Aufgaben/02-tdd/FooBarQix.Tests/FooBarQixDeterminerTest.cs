@@ -11,6 +11,7 @@ namespace FooBarQix.Tests
         [InlineData(7, "Qix")]
         [InlineData(21,"FooQix")]
         [InlineData(105,"FooBarQix")]
+        [InlineData(420,"FooBarQix")]
 
         public void Determine_WhenNumberNotDivisible_MustReturnNumberAsString(int number, string expected)
         {
